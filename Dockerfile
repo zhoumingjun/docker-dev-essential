@@ -20,7 +20,6 @@ RUN apt-get update && apt-get install -y \
     flex \
     g++ \
     git \
-    golang \
     libarchive-dev \
     libboost-dev \
     libboost-test-dev \
@@ -47,3 +46,9 @@ RUN rm -rf /var/cache/oracle-jdk8-installer
 
 #export java_home
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+
+#=================== GOLANG ============================
+wget https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
+tar -C /usr/local -zxf go1.4.2.linux-amd64.tar.gz
+ENV PATH $PATH:/usr/local/go/bin
