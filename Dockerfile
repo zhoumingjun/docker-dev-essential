@@ -38,7 +38,8 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     python \
     zip \
-    zlib1g-dev
+    zlib1g-dev \
+    libpcre3-dev
 
 #clean cache
 RUN apt-get clean
@@ -53,7 +54,6 @@ RUN wget https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz && \
     tar -C /usr/local -zxf go1.5.linux-amd64.tar.gz
 
 ENV PATH $PATH:/usr/local/go/bin
-
 
 #=================== swig    ============================
 RUN wget http://downloads.sourceforge.net/project/swig/swig/swig-3.0.7/swig-3.0.7.tar.gz && \
