@@ -50,7 +50,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 #=================== GOLANG ============================
 wget https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz
-tar -C /usr/local -zxf go1.4.2.linux-amd64.tar.gz
+tar -C /usr/local -zxf go1.5.linux-amd64.tar.gz
 ENV PATH $PATH:/usr/local/go/bin
 
 
