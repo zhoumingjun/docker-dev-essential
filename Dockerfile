@@ -49,6 +49,15 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 
 #=================== GOLANG ============================
-wget https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
+wget https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz
 tar -C /usr/local -zxf go1.4.2.linux-amd64.tar.gz
 ENV PATH $PATH:/usr/local/go/bin
+
+
+#=================== swig    ============================
+wget http://downloads.sourceforge.net/project/swig/swig/swig-3.0.7/swig-3.0.7.tar.gz
+tar -xvf swig-3.0.7.tar.gz
+cd swig-3.0.7
+./configure
+make
+make install
