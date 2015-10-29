@@ -39,7 +39,9 @@ RUN apt-get update && apt-get install -y \
     python \
     zip \
     zlib1g-dev \
-    libpcre3-dev
+    libpcre3-dev \
+    supervisor
+
 
 #clean cache
 RUN apt-get clean
